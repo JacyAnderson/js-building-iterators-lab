@@ -2,9 +2,17 @@
 // Don't worry about initialValue at first. You can always add it in later.
 
 function myReduce(arr, callback) {
-
-//  CODE INSIDE HERE   //
-
+	let acc = arr,
+	if (typeof arr == undefined){
+		return arr;
+	} else {
+		i = arr[0];
+	}
+	for (var i = 0; i < arr.length; i++) {
+		current = callback(acc, arr[i], i, arr);
+		acc = current;
+	}
+	return acc;
 }
 
 /*
